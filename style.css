@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+
+:root {
+  --blue: rgb(25, 146, 212);
+  --yellow: rgb(250, 204, 21);
+  --yellow-dark: rgb(240, 180, 41);
+  --gray: rgb(226, 232, 240);
+  --gray-dark: rgb(99, 99, 99);
+  --gray-darker: rgb(51, 51, 51);
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.4fr 3fr;
+}
+
+.sidebar {
+  padding: 1rem 2rem 1rem 1rem;
+  width: min(100%, 375px);
+  background-color: var(--blue);
+  color: white;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.nav-brand img {
+  width: 50px;
+}
+
+.nav-brand h1 {
+  font-size: 2.2rem;
+}
+
+.nav-items {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+  list-style: none;
+}
+
+.nav-item {
+  width: max-content;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  gap: 1.75rem;
+  cursor: pointer;
+}
+
+.nav-item img {
+  width: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
