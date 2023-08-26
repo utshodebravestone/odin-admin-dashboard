@@ -9,11 +9,10 @@
       href="./images/dashboard.svg"
       type="image/x-icon"
     />
-    <title>Document</title>
+    <script src="./script.js"></script>
+    <title>Odin Dashboard</title>
   </head>
   <body>
-    <!-- https://cdn.pixabay.com/photo/2013/07/13/14/02/star-161984_1280.png -->
-
     <div class="page">
       <div class="sidebar">
         <nav class="nav">
@@ -64,7 +63,39 @@
       </div>
 
       <div class="content">
-        <header class="header"></header>
+        <header class="header">
+          <div class="upper-section">
+            <form class="search-form">
+              <img class="icon" src="./images/search.svg" />
+              <input type="text" />
+            </form>
+            <div class="profile-tools">
+              <img class="icon" src="./images/notification.svg" />
+              <img
+                class="user-image"
+                src="https://cdn.pixabay.com/photo/2013/07/13/14/02/star-161984_1280.png"
+              />
+              <h3 class="username">Star O'Fish</h3>
+            </div>
+          </div>
+          <div class="lower-section">
+            <div class="user-info">
+              <img
+                class="user-image"
+                src="https://cdn.pixabay.com/photo/2013/07/13/14/02/star-161984_1280.png"
+              />
+              <div class="greeting">
+                <p>Hi there,</p>
+                <h3>Star O'Fish</h3>
+              </div>
+            </div>
+            <div class="interactions">
+              <button class="interaction-btn">New</button>
+              <button class="interaction-btn">Upload</button>
+              <button class="interaction-btn">Share</button>
+            </div>
+          </div>
+        </header>
         <div class="contents"></div>
       </div>
     </div>

@@ -1,31 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Ubuntu;
 }
 
 :root {
   --blue: rgb(25, 146, 212);
   --yellow: rgb(250, 204, 21);
   --yellow-dark: rgb(240, 180, 41);
-  --gray: rgb(226, 232, 240);
+  --white-darker: rgb(226, 232, 240);
+  --gray: rgb(200, 200, 200);
   --gray-dark: rgb(99, 99, 99);
   --gray-darker: rgb(51, 51, 51);
+
+  --sidebar-width: min(100%, 375px);
+  --content-width: calc(100vw - var(--sidebar-width));
 }
 
 .page {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1.4fr 3fr;
+  grid-template-columns: var(--sidebar-width) var(--content-width);
+  font-family: Ubuntu, sans-serif;
 }
 
 .sidebar {
   padding: 1rem 2rem 1rem 1rem;
-  width: min(100%, 375px);
+  height: 100%;
+  width: var(--sidebar-width);
   background-color: var(--blue);
   color: white;
+  font-family: "Mochiy Pop P One", sans-serif;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .nav-brand {
@@ -40,7 +55,8 @@
 }
 
 .nav-brand h1 {
-  font-size: 2.2rem;
+  font-size: 2.25rem;
+  font-weight: 500;
 }
 
 .nav-items {
@@ -59,7 +75,6 @@
   align-items: end;
   justify-content: start;
   gap: 1.75rem;
-  cursor: pointer;
 }
 
 .nav-item img {
@@ -69,6 +84,132 @@
 .nav-link {
   text-decoration: none;
   color: white;
+  font-weight: 500;
+  font-size: 1.15rem;
+  transition: color 0.25s;
+}
+
+.nav-link:hover {
+  color: var(--gray);
+}
+
+.content {
+  width: var(--content-width);
+  height: 100%;
+  display: gird;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-color: var(--white-darker);
+}
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 0.25rem 0.075rem var(--gray-dark);
+}
+
+.upper-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.search-form input {
+  width: 40vw;
+  height: 2rem;
+  padding: 1rem;
+  border: 0.1rem solid var(--gray);
+  border-radius: 2rem;
+  background-color: var(--white-darker);
+}
+
+.profile-tools {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.upper-section .user-image {
+  width: 50px;
+  padding: 0.3rem;
+}
+
+.upper-section .icon {
+  width: 25px;
+}
+
+.upper-section .username {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.lower-section {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.greeting p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.greeting h3 {
+  font-size: 1.75rem;
+}
+
+.interactions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.interaction-btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--blue);
+  color: white;
+  border: 0.15rem solid var(--blue);
+  border-radius: 2rem;
+  font-size: 1rem;
   font-weight: 900;
-  font-size: 1.4rem;
+  transition: color 0.5s, background-color 0.5s;
+  cursor: pointer;
+}
+
+.interaction-btn:hover {
+  background-color: white;
+  color: var(--blue);
+}
+
+.user-image {
+  width: 75px;
+  padding: 1rem;
+  background-color: var(--yellow);
+  border-radius: 50%;
 }
