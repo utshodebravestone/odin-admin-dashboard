@@ -15,7 +15,7 @@
   --gray-dark: rgb(99, 99, 99);
   --gray-darker: rgb(51, 51, 51);
 
-  --sidebar-width: min(100%, 375px);
+  --sidebar-width: min(100%, 350px);
   --content-width: calc(100vw - var(--sidebar-width));
 }
 
@@ -55,7 +55,7 @@
 }
 
 .nav-brand h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -212,4 +212,127 @@
   padding: 1rem;
   background-color: var(--yellow);
   border-radius: 50%;
+}
+
+.contents {
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1rem;
+}
+
+.contents .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  background-color: white;
+  border-left: 0.5rem solid var(--yellow-dark);
+  border-radius: 0.3rem;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card .actions {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.card .actions img {
+  width: 25px;
+}
+
+.contents .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contents .right .top {
+  background-color: white;
+  padding: 0.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+}
+
+.contents .right .top div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid var(--white-darker);
+}
+
+.contents .right .top div:last-child {
+  border-bottom: none;
+}
+
+.contents .right .top div h1 {
+  font-size: 1.2rem;
+}
+
+.contents .right .top div p {
+  font-size: 0.9rem;
+}
+
+.contents .right .bottom {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.contents .right .bottom .user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contents .right .bottom .user img {
+  padding: 0.25rem;
+  width: 50px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+.contents .right .bottom .user div .name {
+  color: var(--gray-darker);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.contents .right .bottom .user div .work {
+  color: var(--gray-dark);
+  font-size: 0.95rem;
+}
+
+.divider {
+  height: 1vh;
 }
